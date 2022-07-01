@@ -98,6 +98,7 @@ animate();
 
 
 window.addEventListener('keydown', (event) => {
+    console.log(event.key);
     switch (event.key) {
         case 'd':
             keys.d.pressed = true
@@ -106,6 +107,9 @@ window.addEventListener('keydown', (event) => {
         case 'a':
             keys.a.pressed = true
             lastKey = 'a'
+        break
+        case 'w':
+            player.velocity.y = -10
         break
     }
     console.log(event.key)
@@ -118,6 +122,9 @@ window.addEventListener('keyup', (event) => {
         break
         case 'a':
             keys.a.pressed = false
+        break
+        case 'w':
+            keys.w.pressed = false
         break
     }
     console.log(event.key)
